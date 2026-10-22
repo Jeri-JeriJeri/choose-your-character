@@ -2,17 +2,15 @@ body {
   background: radial-gradient(circle, #002424 0%, #000F0F 100%);
   color: #68C7EC;  
   font-family: "Cantarell", sans-serif;
-  overflow: hidden;
+  
   
 
 }
 
 .container {
-  width: 99dvw;
-  height: 98dvh; 
   display: grid;
   grid-template-columns: 1fr 250px 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: fit-content fit-content;
   grid-template-areas: "info empty picture" "graph empty accomps";
 }
 .container h1 {
@@ -31,6 +29,7 @@ body {
 
 .info {
   grid-area: info;
+  grid-column: span 2;
   animation: info-animation 1.5s;
   animation-delay: 0.3s;
   opacity: 0;
@@ -42,7 +41,7 @@ body {
 
 }
 .home-btn {
-  grid-area: empty;
+  /* grid-area: empty; */
   justify-self: center;
   margin-top: 2rem;
   animation: info-animation 0.5s ;
@@ -90,7 +89,6 @@ body {
 .graph p {
   grid-column: 1 / 4;
   grid-row: 2;
-  
   font-size: 1.5rem;
   
 }
@@ -255,14 +253,14 @@ body {
           }
           @keyframes button {
             0% {
-              width: 7%;
+              width: 15%;
               height: 2rem;
               box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
               border-radius: 7px;
             }
             
             100% {
-              width: 11%;
+              width: 20%;
               height: 2.7rem;
               box-shadow: 0 20px 30px rgba(0, 0, 0, 2);
               border-radius: 30px;
