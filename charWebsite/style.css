@@ -72,8 +72,8 @@ body {
 .graph {
   grid-area: graph;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, fit-content);
+  grid-template-rows: repeat(3, min-content);
   justify-items: center;
   align-items: center;
   animation: graph-animation 1.5s;
@@ -90,6 +90,7 @@ body {
   grid-column: 1 / 4;
   grid-row: 2;
   font-size: 1.5rem;
+  margin-bottom: 3rem;
   
 }
 .graph button {
@@ -103,10 +104,13 @@ body {
   border-radius: 7px;
   background-color: #008a8a ;
   border: 1px solid black;
+  transition: width 0.5s, height 0.5s, box-shadow 0.5s, border-radius 0.5s ease-in-out;
 }
 #btn:hover {
-  animation: button 0.5s;
-  animation-fill-mode: forwards;
+   width: 5rem;
+  height: 2.7rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 2);
+  border-radius: 14px; 
   
 }
 #btn:active {
@@ -123,10 +127,14 @@ body {
   border: 1px solid black;
   width: 3.7rem;
   height: 2rem;
+  transition: width 0.5s, height 0.5s, box-shadow 0.5s, border-radius 0.5s;
 }
 #home-btn:hover {
-  animation: home-btn 0.5s;
-  animation-fill-mode: forwards;
+  width: 6rem;
+  height: 2.7rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 2);
+  border-radius: 14px;
+                        
 }
 #home-btn:active {
   transform: translateY(4px);
